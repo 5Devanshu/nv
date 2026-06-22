@@ -1,5 +1,12 @@
 const BASE = import.meta.env.VITE_API_BASE_URL;
 
+// Debug: Log the base URL
+if (!BASE) {
+  console.error('❌ VITE_API_BASE_URL is not set!');
+} else {
+  console.log('✅ API Base URL:', BASE);
+}
+
 const APIS = {
   // ─── Auth ──────────────────────────────────────────────────
   LOGIN:   `${BASE}/api/auth/login`,
